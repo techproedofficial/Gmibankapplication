@@ -14,6 +14,7 @@ public class LoginStep {
 
         Driver.getDriver().get(ConfigurationReader.getProperty("gmibank_login_url"));
         loginPage.loginDropdown.click();
+        Driver.waitAndClick(loginPage.loginDropdown,5);
         loginPage.signInButton.click();
     }
 

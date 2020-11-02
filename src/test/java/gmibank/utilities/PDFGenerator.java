@@ -73,7 +73,7 @@ public class PDFGenerator {
         Document document = new Document();
         String pdf_path = fileName;
         String pdf_title = header;
-        String logo_path = "/Users/ibrahimkalin/Downloads/FHC Trip.jpg";
+        String logo_path = "/Users/ibrahimkalin/Downloads/Techproed.jpg";
         List<String> headers = new ArrayList<String>();
         headers.add("Applicants");
         headers.add("SSNs");

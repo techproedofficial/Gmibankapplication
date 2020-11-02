@@ -15,7 +15,7 @@ Feature: Dummy Test can be verified
       Then user logs in
       Examples:
       |username|password|
-      |user    |TechUser1|
+      |firstUser    |firstUser123|
 
       @database
       Scenario: database testing
@@ -29,4 +29,4 @@ Feature: Dummy Test can be verified
 
           Examples:
           |header|fileName|
-          |Here is the info of all some users!|src/main/resources/test_data/ApplicantInfo.pdf|
+          |Hello everyone!!|src/main/resources/test_data/ApplicantInfo.pdf|

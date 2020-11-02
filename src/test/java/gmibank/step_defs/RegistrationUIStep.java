@@ -25,6 +25,7 @@ public class RegistrationUIStep  {
 
     @Then("user enters firstname and lastname as {string} and {string}")
     public void user_enters_firstname_and_lastname_as_and(String firstname, String lastname) {
+
         registrationPage.firstnameTextbox.sendKeys(firstname);
         registrationPage.lastnameTextbox.sendKeys(lastname);
 
@@ -62,8 +63,8 @@ public class RegistrationUIStep  {
 
     @Then("user clicks on register button and sees the success message as {string}")
     public void user_clicks_on_register_button_and_sees_the_success_message_as(String expectedMessage) {
-
-        registrationPage.registerButton.click();
+        Driver.waitAndClick(registrationPage.registerButton,5);
+//        registrationPage.registerButton.click();
         Assert.assertEquals("successfully registered",expectedMessage);
     }
 

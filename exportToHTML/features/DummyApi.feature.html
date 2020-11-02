@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>DummyApi.feature</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0033b3;}
+.s1 { color: #080808;}
+.s2 { color: #080808;}
+.s3 { color: #9e880d;}
+.s4 { color: #297bde;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+DummyApi.feature</font>
+</center></td></tr></table>
+<pre><span class="s0">Feature</span><span class="s1">: </span><span class="s2">Dummy Test can be verified</span>
+
+
+
+  <span class="s3">@accounts</span>
+  <span class="s0">Scenario</span><span class="s1">: </span><span class="s2">accounts end point</span>
+    <span class="s0">Given </span><span class="s2">user verifies all accounts</span>
+    <span class="s0">And </span><span class="s2">user verifies</span>
+    <span class="s0">Then </span><span class="s2">user gets allcustomer info with user info</span>
+
+    <span class="s3">@loginGMI</span>
+    <span class="s0">Scenario Outline</span><span class="s1">: </span><span class="s2">go to registration</span>
+      <span class="s0">Given </span><span class="s2">user goes to login page</span>
+      <span class="s0">And </span><span class="s2">user provides username &quot;</span><span class="s1">&lt;username&gt;</span><span class="s2">&quot; and password &quot;</span><span class="s1">&lt;password&gt;</span><span class="s2">&quot;</span>
+      <span class="s0">Then </span><span class="s2">user logs in</span>
+      <span class="s0">Examples</span><span class="s1">:</span>
+      <span class="s0">|</span><span class="s4">username</span><span class="s0">|</span><span class="s4">password</span><span class="s0">|</span>
+      <span class="s0">|</span><span class="s4">user    </span><span class="s0">|</span><span class="s4">TechUser1</span><span class="s0">|</span>
+
+      <span class="s3">@database</span>
+      <span class="s0">Scenario</span><span class="s1">: </span><span class="s2">database testing</span>
+        <span class="s0">Given </span><span class="s2">user gets all data from database</span>
+
+
+
+        <span class="s3">@pdfGenerator</span>
+        <span class="s0">Scenario Outline</span><span class="s1">: </span><span class="s2">generate a pdf</span>
+          <span class="s0">Given </span><span class="s2">user generates pdf passing the header &quot;</span><span class="s1">&lt;header&gt;</span><span class="s2">&quot; and &quot;</span><span class="s1">&lt;fileName&gt;</span><span class="s2">&quot;</span>
+
+          <span class="s0">Examples</span><span class="s1">:</span>
+          <span class="s0">|</span><span class="s4">header</span><span class="s0">|</span><span class="s4">fileName</span><span class="s0">|</span>
+          <span class="s0">|</span><span class="s4">Here is the info of all some users!</span><span class="s0">|</span><span class="s4">src/main/resources/test_data/ApplicantInfo.pdf</span><span class="s0">|</span></pre>
+</body>
+</html>
