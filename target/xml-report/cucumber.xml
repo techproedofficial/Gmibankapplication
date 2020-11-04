@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="0.619286">
+<testcase classname="Dummy Test can be verified" name="database testing" time="0.619286">
+<system-out><![CDATA[Given user gets all data from database......................................passed
+]]></system-out>
+</testcase>
+</testsuite>

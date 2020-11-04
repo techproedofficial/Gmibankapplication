@@ -44,3 +44,8 @@
         Examples:
           |path|sheet|
           |/Users/ibrahimkalin/Desktop/GMI/ Bank/GMI/ BRD.xlsx|/Users/ibrahimkalin/IdeaProjects/gmiapplication/data.txt|
+
+
+    @applicant
+    Scenario: Just api calls for applicants
+      Given user finally validates some data with api

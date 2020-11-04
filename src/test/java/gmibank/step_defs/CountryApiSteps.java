@@ -9,7 +9,7 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 public class CountryApiSteps {
     Response response;
-    String bearerToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTYwMjkwNDYzNH0.n_OEeHfc6y96SFS4e_J0vtKE0Vx6Fi0na_kwOLKg5gR8SZfVwrQ5QLIJS_BHZTpXUYzIxfKAgEh7CFg70UJl3g";
+    String bearerToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTYwNDYxMzE5OX0.yPsyx7OOjpNF0aCF-hx_n4g4INOVUYSal3fIIB_nCI3zMoMWQVLa3YH0A1BkGrnCHUs3PH3G2j9oH8CphVpGYA";
 
 
     @Given("user gets all data for countries using {string}")
