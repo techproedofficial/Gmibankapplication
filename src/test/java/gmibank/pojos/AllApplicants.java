@@ -1,19 +1,22 @@
 package gmibank.pojos;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import java.util.List;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class AllApplicants {
 
 
-    public NewApplicant[] getList() {
-        return list;
+    public List<NewApplicant> getApplicants() {
+        return applicants;
     }
 
-    public void setList(NewApplicant[] list) {
-        this.list = list;
+    public void setApplicants(List<NewApplicant> applicants) {
+        this.applicants = applicants;
     }
 
-    private NewApplicant[] list;
+    private List<NewApplicant> applicants;
 
 
 }

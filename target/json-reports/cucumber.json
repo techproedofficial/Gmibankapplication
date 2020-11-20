@@ -1,12 +1,12 @@
 [
   {
-    "line": 1,
+    "line": 2,
     "elements": [
       {
         "before": [
           {
             "result": {
-              "duration": 308411,
+              "duration": 2412017,
               "status": "passed"
             },
             "match": {
@@ -15,7 +15,7 @@
           },
           {
             "result": {
-              "duration": 16865,
+              "duration": 22033,
               "status": "passed"
             },
             "match": {
@@ -23,14 +23,14 @@
             }
           }
         ],
-        "line": 21,
-        "name": "database testing",
+        "line": 32,
+        "name": "Just api calls for applicants",
         "description": "",
-        "id": "dummy-test-can-be-verified;database-testing",
+        "id": "register-new-applicants;just-api-calls-for-applicants",
         "after": [
           {
             "result": {
-              "duration": 22084,
+              "duration": 33235,
               "status": "passed"
             },
             "match": {
@@ -43,29 +43,53 @@
         "steps": [
           {
             "result": {
-              "duration": 617705120,
+              "duration": 87619,
               "status": "passed"
             },
-            "line": 22,
-            "name": "user gets all data from database",
+            "line": 33,
+            "name": "user creates an end-point",
             "match": {
-              "location": "DatabaseStep.user_gets_all_data_from_database()"
+              "location": "ApplicantApi.user_creates_an_end_point()"
             },
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1985387814,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "user gets all data for an applicant",
+            "match": {
+              "location": "ApplicantApi.user_gets_all_data_for_an_applicant()"
+            },
+            "keyword": "And "
           }
         ],
         "tags": [
           {
-            "name": "@database"
+            "name": "@NewApplicants"
+          },
+          {
+            "name": "@applicantApi"
           }
         ]
       }
     ],
-    "name": "Dummy Test can be verified",
+    "name": "Register new applicants",
     "description": "",
-    "id": "dummy-test-can-be-verified",
+    "id": "register-new-applicants",
     "keyword": "Feature",
-    "uri": "src/main/resources/features/DummyApi.feature",
-    "tags": []
+    "uri": "src/test/resources/features/NewApplicant.feature",
+    "tags": [
+      {
+        "name": "@NewApplicants",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
   }
 ]

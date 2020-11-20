@@ -8,6 +8,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -71,6 +72,30 @@ public class Driver {
         }
     }
 
+    public static void waitAndSendText(WebElement element,String text, int timeout) {
+        for (int i = 0; i < timeout; i++) {
+            try {
+                element.sendKeys(text);
+                return;
+            } catch (WebDriverException e) {
+                wait(1);
+            }
+        }
+    }
+
+    public static String waitAndGetText(WebElement element, int timeout) {
+        String text="";
+        for (int i = 0; i < timeout; i++) {
+            try {
+                text = element.getText();
+                return text;
+            } catch (WebDriverException e) {
+                wait(1);
+            }
+        }
+        return null;
+    }
+
     public static void wait(int secs) {
         try {
             Thread.sleep(1000 * secs);
@@ -118,4 +143,15 @@ public class Driver {
         jse.executeScript(command, element);
     }
 
+    public static void selectAnItemFromDropdown(WebElement item, String selectableItem){
+        wait(5);
+        Select select = new Select(item);
+        for (int i =0;i<select.getOptions().size();i++){
+            if(select.getOptions().get(i).getText().equalsIgnoreCase(selectableItem)){
+                select.getOptions().get(i).click();
+                break;
+            }
+        }
+
+    }
 }

@@ -1,16 +1,24 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/main/resources/features/DummyApi.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/NewApplicant.feature");
 formatter.feature({
-  "name": "Dummy Test can be verified",
+  "name": "Register new applicants",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@NewApplicants"
+    }
+  ]
 });
 formatter.scenario({
-  "name": "database testing",
+  "name": "Just api calls for applicants",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@database"
+      "name": "@NewApplicants"
+    },
+    {
+      "name": "@applicantApi"
     }
   ]
 });
@@ -21,11 +29,21 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "user gets all data from database",
+  "name": "user creates an end-point",
   "keyword": "Given "
 });
 formatter.match({
-  "location": "DatabaseStep.user_gets_all_data_from_database()"
+  "location": "ApplicantApi.user_creates_an_end_point()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user gets all data for an applicant",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "ApplicantApi.user_gets_all_data_for_an_applicant()"
 });
 formatter.result({
   "status": "passed"

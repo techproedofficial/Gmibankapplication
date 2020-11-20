@@ -9,7 +9,7 @@ import io.restassured.response.Response;
 
 import static io.restassured.RestAssured.given;
 public class RegistrationBackendStep {
-    String bearerToken ="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTYwMzE4MTQ2NX0.VioAwvkc5RbDvZ4xNERRmfAKq_iLNL8WsOVaMtbpzPy6WyvgrFsUOAw0YL2dM7EErlbLCntKH0_61Y5L6VLz0g";
+    String bearerToken ="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTYwNDYxMzE5OX0.yPsyx7OOjpNF0aCF-hx_n4g4INOVUYSal3fIIB_nCI3zMoMWQVLa3YH0A1BkGrnCHUs3PH3G2j9oH8CphVpGYA";
     String url = "https://www.gmibank.com/api/tp-account-registrations" ;
 
     @When("user finally validates the data with api")
@@ -66,18 +66,28 @@ public class RegistrationBackendStep {
 //        response.prettyPrint();
         ObjectMapper obj = new ObjectMapper();
 
-//        AllApplicants newApplicant = obj.readValue(response.asString(),AllApplicants.class);
-        NewApplicant[] newApplicants = obj.readValue(response.asByteArray(), NewApplicant[].class);
 
-        for (int i=0; i<newApplicants.length;i++){
-            System.out.println(newApplicants[i].getFirstName());
-            System.out.println(newApplicants[i].getLastName());
-            System.out.println(newApplicants[i].getEmail());
-            System.out.println(newApplicants[i].getMobilePhoneNumber());
-            System.out.println(newApplicants[i].getNewPassword());
-            System.out.println(newApplicants[i].getSSN());
+        NewApplicant[] applicantApi = obj.readValue(response.asString(),NewApplicant[].class);
 
-        }
+
+//        System.out.println(applicantApi.length);
+//
+//
+//
+//
+//
+//
+//
+//
+//        for (int i=0; i<applicantApi.length;i++){
+//            System.out.println(applicantApi[i].getFirstname());
+//            System.out.println(applicantApi[i].getLastname());
+//            System.out.println(applicantApi[i].getEmail());
+//            System.out.println(applicantApi[i].getMobilePhoneNumber());
+//            System.out.println(applicantApi[i].getId());
+//            System.out.println(applicantApi[i].getSsn());
+//
+//        }
     }
 
 }

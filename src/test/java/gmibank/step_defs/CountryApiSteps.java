@@ -2,50 +2,28 @@ package gmibank.step_defs;
 
 
 import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import io.restassured.http.ContentType;
-import io.restassured.response.Response;
-
-import static io.restassured.RestAssured.given;
 public class CountryApiSteps {
-    Response response;
-    String bearerToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImF1dGgiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImV4cCI6MTYwNDYxMzE5OX0.yPsyx7OOjpNF0aCF-hx_n4g4INOVUYSal3fIIB_nCI3zMoMWQVLa3YH0A1BkGrnCHUs3PH3G2j9oH8CphVpGYA";
 
 
-    @Given("user gets all data for countries using {string}")
-    public void user_gets_all_data_for_countries_using(String url) {
-        System.out.println("Here is the stpe1");
+    @Given("user sets the response using api end point {string} and creates country using {string} and {string}")
+    public void user_sets_the_response_using_api_end_point_and_creates_country_using_and(String url, String id, String name) {
+        String bearerToken ="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTYwMjI3NjkwN30.NRU80lPHmJ79_P_bzk1VjsV4bcJ9ktvtB2QaH8av7Ua8QDFh5r2ASUbxiTsh5dTeTHlrex5dLF8RSID_yqF8MA";
 
-
-        response = given().headers(
-		              "Authorization",
-		              "Bearer " + bearerToken,
-		              "Content-Type",
-		              ContentType.JSON,
-		              "Accept",
-		              ContentType.JSON)
-		          .when()
-		          .get(url)
-		          .then()
-		          .contentType(ContentType.JSON)
-		          .extract()
-		          .response();
-//				RestAssured.get("https://www.gmibank.com/api/tp-customers");
-		response.prettyPrint();
-//		ObjectMapper obj = new  ObjectMapper();
+//      Response response = given().headers(
+//                    "Authorization",
+//                    "Bearer " + bearerToken,
+//                    "Content-Type",
+//                    ContentType.JSON,
+//                    "Accept",
+//                    ContentType.JSON)
+//                .when().body("{\"name\":\"SENEGAL\"}")
+//                .post(url)
+//                .then()
+//                .contentType(ContentType.JSON)
+//                .extract()
+//                .response();
+////                RestAssured.get("https://www.gmibank.com/api/tp-customers");
+//      response.prettyPrint();
+////        ObjectMapper obj = new  ObjectMapper();
     }
-
-    @Given("user deserializes country data as json to java pojo")
-    public void user_deserializes_country_data_as_json_to_java_pojo() {
-        System.out.println("Here is the stpe2");
-
-    }
-
-    @Then("user validates the data")
-    public void user_validates_the_data() {
-        System.out.println("Here is the stpe3");
-
-    }
-
-
 }

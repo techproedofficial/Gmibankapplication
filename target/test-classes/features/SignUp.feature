@@ -1,6 +1,10 @@
 @SignUp
 Feature: SignUp page for GMI Bank
 
+
+
+
+  @signUp
     Scenario: sign up
 
       Given user on the sign up page
@@ -13,3 +17,14 @@ Feature: SignUp page for GMI Bank
       And customer creates a password "customer12345"
       When customer confirms password "customer12345"
       Then customer clicks on register button
+
+
+    @123
+    Scenario Outline: all users
+      Given user on the sign up page
+      And user types SSN number "<SSN>"
+      When user types "<firstName>" and "<lastName>"
+
+
+      Examples: all data
+      |SSN|firstName| lastName|

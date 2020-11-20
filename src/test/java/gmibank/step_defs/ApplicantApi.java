@@ -3,32 +3,30 @@ package gmibank.step_defs;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import cucumber.api.java.en.Given;
 import gmibank.pojos.NewApplicant;
-import gmibank.utilities.TxtUtil;
+import gmibank.utilities.ConfigurationReader;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
 public class ApplicantApi {
 
-    String bearerToken ="eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyIiwiYXV0aCI6IlJPTEVfVVNFUiIsImV4cCI6MTYwMzE4MTQ2NX0.VioAwvkc5RbDvZ4xNERRmfAKq_iLNL8WsOVaMtbpzPy6WyvgrFsUOAw0YL2dM7EErlbLCntKH0_61Y5L6VLz0g";
+
     String url = "https://www.gmibank.com/api/tp-account-registrations" ;
 
     @Given("user creates an end-point")
     public void user_creates_an_end_point() {
 
-//        MyClass[] myObjects = mapper.readValue(json, MyClass[].class);
+
     }
 
     @Given("user gets all data for an applicant")
     public void user_gets_all_data_for_an_applicant() throws IOException {
         Response response =given().headers(
                 "Authorization",
-                "Bearer " + bearerToken,
+                "Bearer " + ConfigurationReader.getProperty("api_bearer_token"),
                 "Content-Type",
                 ContentType.JSON,
                 "Accept",
@@ -42,28 +40,47 @@ public class ApplicantApi {
 
 //        response.prettyPrint();
         ObjectMapper obj = new ObjectMapper();
+//        List <String> list2 = response.jsonPath().getList("$");
 
-//        AllApplicants newApplicant = obj.readValue(response.asString(),AllApplicants.class);
-        NewApplicant[] newApplicants = obj.readValue(response.asByteArray(), NewApplicant[].class);
 
-        for (int i=0; i<newApplicants.length;i++){
+        NewApplicant[] newApplicants = obj.readValue(response.asString(), NewApplicant[].class);
+//        System.out.println(newApplicants[1].getApplicants());
+//        System.out.println(response.asString());
 
-            System.out.println(newApplicants[i].getFirstName());
-            System.out.println(newApplicants[i].getLastName());
-//            System.out.println(newApplicants[i].getEmail());
-//            System.out.println(newApplicants[i].getMobilePhoneNumber());
-//            System.out.println(newApplicants[i].getNewPassword());
-//            System.out.println(newApplicants[i].getSSN());
+//        List<NewApplicant> apps = Arrays.asList(obj.readValue(response.asString(), NewApplicant[].class));
+//
+//        for(NewApplicant aa : apps){
+//            System.out.println(aa.getSSN());
+//        }
+//        AllApplicants applicants = new AllApplicants();
+//        applicants.setApplicants(Arrays.asList(newApplicants));
+//
+//
+//        for (NewApplicant each : newApplicants){
+//            System.out.println(each.getSSN());
+//        }
 
-        }
-        List <String[]> list = TxtUtil.getAllLines();
-        for (int i = 0; i< list.size();i++ ){
 
-                String [] arr = list.get(i);
-                if(list.get(i).length > 0)
-                System.out.println(Arrays.toString(arr));
+//
+//
+//        for( AllApplicants each : newApplicants){
+//
+//           NewApplicant [] applicant = each.getApplicants();
+//           for (int j =0; j<applicant.length;j++){
+//               System.out.println(applicant[j].getSSN());
+//           }
+//        }
 
-        }
+
+
+//        List <String[]> list = TxtUtil.getAllLines();
+//        for (int i = 0; i< list.size();i++ ){
+//
+//                String [] arr = list.get(i);
+//                if(list.get(i).length > 0)
+//                System.out.println(Arrays.toString(arr));
+//
+//        }
 
 
 

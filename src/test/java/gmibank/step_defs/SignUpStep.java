@@ -9,6 +9,7 @@ public class SignUpStep {
     @Given("user on the sign up page")
     public void user_on_the_sign_up_page() {
 
+
     }
 
     @Given("user provides SSN number using {string}")

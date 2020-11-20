@@ -39,6 +39,9 @@ public class RegistrationPage {
 
     @FindBy(id = "register-submit")
     public WebElement registerButton;
+
+    @FindBy(xpath = "//*[contains(text(),'translation-not-foun'")
+    public WebElement toastContainer;
 }
 
 

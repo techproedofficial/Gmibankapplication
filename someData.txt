@@ -1,0 +1,14 @@
+|143-45-2345|batch11|batch2|Gallows road 8765|321-345-2354|user2|hisetkala@gmail.com|984321user5[3]|4321user5[3]|successfully registered|
+      |154-45-2345|batch111|batch2|Gallows road 8765|321-345-2354|user2|hisetkalq@gmail.com|874321user5[3]|4321user5[3]|successfully registered|
+      |176-45-2345|batch1111|batch2|Gallows road 8765|321-345-2354|user2|hisetkalw@gmail.com|764321user5[3]|4321user5[3]|successfully registered|
+      |187-45-2345|batch11111|batch2|Gallows road 8765|321-345-2354|user2|hisetkale@gmail.com|654321user5[3]|4321user5[3]|successfully registered|
+      |176-45-2345|batch111111|batch2|Gallows road 8765|321-345-2354|user2|hisetkalr@gmail.com|544321user5[3]|4321user5[3]|successfully registered|
+      |125-45-2345|batch1111111|batch2|Gallows road 8765|321-345-2354|user2|hisetkalt@gmail.com|434321user5[3]|4321user5[3]|successfully registered|
+      |195-45-2345|batch11111111|batch2|Gallows road 8765|321-345-2354|user2|hisetkaly@gmail.com|234321user5[3]|4321user5[3]|successfully registered|
+      |189-45-2345|batch1111222|batch2|Gallows road 8765|321-345-2354|user2|hisetkalu@gmail.com|214321user5[3]|4321user5[3]|successfully registered|
+      |198-45-2345|batch122222|batch2|Gallows road 8765|321-345-2354|user2|hisetkalj@gmail.com|904321user5[3]|4321user5[3]|successfully registered|
+      |132-45-2345|batch1222222|batch2|Gallows road 8765|321-345-2354|user2|hisetkalb@gmail.com|784321user5[3]|4321user5[3]|successfully registered|
+      |100-45-2345|batch12222222|batch2|Gallows road 8765|321-345-2354|user2|hisetkaln@gmail.com|674321user5[3]|4321user5[3]|successfully registered|
+      |101-45-2345|batch122222222|batch2|Gallows road 8765|321-345-2354|user2|hisetkalm@gmail.com|456321user5[3]|4321user5[3]|successfully registered|
+      |120-45-2345|batch133333333|batch2|Gallows road 8765|321-345-2354|user2|hisetkalklk@gmail.com|344321user5[3]|4321user5[3]|successfully registered|
+      |109-45-2345|batch1333|batch2|Gallows road 8765|321-345-2354|user2|hisetkallku@gmail.com|4321user5[3]|024321user5[3]|successfully registered|
