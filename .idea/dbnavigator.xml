@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DataExportManager">
@@ -33,11 +33,11 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="25c266ab-890b-4ef4-8149-b340abb57ee9">
-      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM pg_catalog.pg_tables;
+      <console name="Connection" type="STANDARD" schema="public" session="Main">SELECT * FROM pg_catalog.pg_tables;
 
 select * from tp_country order by id desc;
 
-insert into tp_country ("id", "name") values ((Select max(id) from tp_country)+1,'TestCountry');
+insert into tp_country (&quot;id&quot;, &quot;name&quot;) values ((Select max(id) from tp_country)+1,'TestCountry');
 
 Select max(id) from tp_country  ;
 
@@ -45,10 +45,10 @@ select * from tp_country where id = 24401;
 
 select * from tp_country;
 
-Select * from tp_customer;]]></console>
-      <console name="Connection 1" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM pg_catalog.pg_tables;
+Select * from tp_customer;</console>
+      <console name="Connection 1" type="STANDARD" schema="public" session="Main">SELECT * FROM pg_catalog.pg_tables;
 
-Select * from tp_customer;]]></console>
+Select * from tp_customer;</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
