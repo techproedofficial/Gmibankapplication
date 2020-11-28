@@ -1,4 +1,3 @@
-
 176-45-2345|,batch1111|,batch2|,Gallows road 8765|321-345-2354|user2|hisetkal@gmail.com|764321user5[3]|4321user5[3]|successfully registered
 187-45-2345|,batch11111|,batch2|,Gallows road 8765|321-345-2354|user2|hisetkal@gmail.com|654321user5[3]|4321user5[3]|successfully registered
 176-45-2345|,batch111111|,batch2|,Gallows road 8765|321-345-2354|user2|hisetkal@gmail.com|544321user5[3]|4321user5[3]|successfully registered

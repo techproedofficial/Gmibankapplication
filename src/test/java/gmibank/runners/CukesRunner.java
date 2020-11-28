@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         },
        features = "src/test/resources/features",
         glue = "gmibank/step_defs",
-        tags = "@applicantApi",
+        tags = "@CreateCountry",
         dryRun = false
 
 

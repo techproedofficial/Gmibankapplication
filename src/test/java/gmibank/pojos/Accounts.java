@@ -3,7 +3,9 @@ package gmibank.pojos;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class State {
+public class Accounts {
+
+    private String unknown;
 
 
 }

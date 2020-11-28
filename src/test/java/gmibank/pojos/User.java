@@ -13,19 +13,6 @@ public class User {
     private boolean activated;
     private String langKey;
     private String imageUrl;
-    private String resetDate;
-
-    private Country [] country;
-
-    public Country[] getCountry() {
-        return country;
-    }
-
-    public void setCountry(Country[] country) {
-        this.country = country;
-    }
-
-
 
     public int getId() {
         return id;
@@ -99,6 +86,6 @@ public class User {
         this.resetDate = resetDate;
     }
 
-
+    private String resetDate;
 
 }

@@ -5,7 +5,6 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import gmibank.pojos.Customer;
 import gmibank.utilities.ConfigurationReader;
-import gmibank.utilities.WriteToTxt;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
@@ -62,7 +61,7 @@ public class CustomerApiSteps {
     @Then("user validates the data")
     public void user_validates_the_data() {
         System.out.println("Here is the stpe3");
-        WriteToTxt.saveDataInFile(filePath,customers[10]);
+//        WriteToTxt.returnCustomerSNN(filePath,customers[10]);
 
     }
 

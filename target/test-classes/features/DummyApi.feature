@@ -29,4 +29,13 @@ Feature: Dummy Test can be verified
 
           Examples:
           |header|fileName|
-          |Hello everyone!!|src/main/resources/test_data/ApplicantInfo.pdf|
+          |Hello everyone!!|src/test/resources/test_data/ApplicantInfo.pdf|
+
+
+  @pdfGenerator
+  Scenario Outline: generate a pdf 2
+    Given user generates pdf passing the header with a list using "<header>" and "<fileName>"
+
+    Examples:
+      |header|fileName|
+      |Customers' Information|src/test/resources/test_data/CustomersFile.pdf|

@@ -1,8 +1,2 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="1.993088">
-<testcase classname="Register new applicants" name="Just api calls for applicants" time="1.993088">
-<system-out><![CDATA[Given user creates an end-point.............................................passed
-And user gets all data for an applicant.....................................passed
-]]></system-out>
-</testcase>
-</testsuite>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" time="0"/>
