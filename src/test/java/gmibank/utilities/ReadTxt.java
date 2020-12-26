@@ -185,4 +185,157 @@ public class ReadTxt {
     }
 
 
+    public static List<String> returnAllCustomersSSNs(String filePath){
+        List<String>allSSNIds = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+//            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+                String temp = "";
+                temp =line.split(",")[0].trim();
+
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+                System.out.println(i++);
+
+                allSSNIds.add(temp);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return allSSNIds;
+    }
+
+    public static List<Customer> returnAllCustomers(String filePath){
+        List<Customer>AllCustomerInfo = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+//            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+                Customer customer = new Customer();
+                String temp = "";
+                temp =line.split(",")[0].trim();
+
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+                System.out.println(i++);
+                customer.setSsn(temp);
+                AllCustomerInfo.add(customer);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return AllCustomerInfo;
+    }
+
+    public static Customer returnAllCustomer(String filePath){
+       Customer customer = new Customer();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+//            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+
+                String temp = "";
+                customer.setSsn(line.split(",")[4].trim());
+                customer.setEmail(line.split(",")[6].trim());
+                customer.setAddress(line.split(",")[5].trim());
+                customer.setFirstName(line.split(",")[2].trim());
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+                System.out.println(i++);
+
+
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return customer;
+    }
+
+    public static List<String> returnAllCustomerCredentials(String filePath){
+        List<String >list = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+//            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+
+                String username =line.split(",")[1].trim();
+                String password = line.split(",")[0].trim();
+               list.add(password);
+               list.add(username);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+                System.out.println(i++);
+
+
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+
+    public static List<Object> returnAllCustomerIds(String filePath){
+        List<Object >list = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+//            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+
+                String id =line.split(",")[0].trim();
+
+                list.add(id);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+
+
+
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
+
+
+    public static List<Object> returnAllComingFromDB(String filePath){
+        List<Object >list = new ArrayList<>();
+        try(BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+            StringBuilder sb = new StringBuilder();
+            String line = br.readLine();
+//            System.out.println(line);
+            int i = 0;
+            while (line != null) {
+
+                String id =line.split(",")[0].trim();
+
+                list.add(id);
+                sb.append(System.lineSeparator());
+                line = br.readLine();
+
+
+
+
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return list;
+    }
 }

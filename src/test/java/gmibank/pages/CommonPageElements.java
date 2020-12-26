@@ -1,6 +1,7 @@
 package gmibank.pages;
 
 import gmibank.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
@@ -9,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class CommonPageElements {
+    String locator= "";
 
     public CommonPageElements(){
         PageFactory.initElements(Driver.getDriver(),this);
@@ -46,5 +48,12 @@ public class CommonPageElements {
 
     @FindBys({@FindBy(xpath = "//table/tbody/tr")})
     public List<WebElement > allUsers;
+
+    By xpath = By.xpath(locator);
+
+
+    public static WebElement getElement (By xpath){
+        return Driver.getDriver().findElement(xpath);
+    }
 
 }

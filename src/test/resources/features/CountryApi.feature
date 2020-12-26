@@ -12,7 +12,8 @@
 
         Examples: create country
         |idJson|nameJson|
-        |name|France|
+        |name|New Zelland2|
+        |name|New Zelland3|
 
         Scenario: read all countries
           Given user sets the countries to response using "https://www.gmibank.com/api/tp-countries"
@@ -25,7 +26,7 @@
 
             Examples: multiple countries
             |endPoint|id|
-            |https://www.gmibank.com/api/tp-countries|/18939|
+            |https://www.gmibank.com/api/tp-countries|/22313|
 
 
     Scenario: read logs

@@ -1,1 +1,662 @@
-[]
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 5,
+        "name": "create a connection with DB",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 597511629,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user creates a connection with db using \"jdbc:postgresql://157.230.48.97:5432/gmibank_db\" , \"techprodb_user\" and \"Techpro_@126\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"jdbc:postgresql://157.230.48.97:5432/gmibank_db\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"techprodb_user\"",
+                  "offset": 92
+                },
+                {
+                  "val": "\"Techpro_@126\"",
+                  "offset": 113
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_creates_a_connection_with_db_using_and(String,String,String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 339675,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 16970,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.searchIphone()"
+            }
+          }
+        ],
+        "line": 51,
+        "name": "read all customer info",
+        "description": "",
+        "id": "all-data-validation-based-on-db;read-all-customer-info;all-customer-data-sets;2",
+        "after": [
+          {
+            "result": {
+              "duration": 28223,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 140768182,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user gets all customer column data using \"Select * from tp_customer\" and \"ssn\" and \"customerSSN.txt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Select * from tp_customer\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"ssn\"",
+                  "offset": 73
+                },
+                {
+                  "val": "\"customerSSN.txt\"",
+                  "offset": 83
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_gets_all_customer_column_data_using_and_and(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 159345694,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user validates all db Customer info2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 35
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_validates_all_db_Customer_info(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@database"
+          },
+          {
+            "name": "@deneme23"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "create a connection with DB",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 309294539,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user creates a connection with db using \"jdbc:postgresql://157.230.48.97:5432/gmibank_db\" , \"techprodb_user\" and \"Techpro_@126\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"jdbc:postgresql://157.230.48.97:5432/gmibank_db\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"techprodb_user\"",
+                  "offset": 92
+                },
+                {
+                  "val": "\"Techpro_@126\"",
+                  "offset": 113
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_creates_a_connection_with_db_using_and(String,String,String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 24252,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 5813,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.searchIphone()"
+            }
+          }
+        ],
+        "line": 52,
+        "name": "read all customer info",
+        "description": "",
+        "id": "all-data-validation-based-on-db;read-all-customer-info;all-customer-data-sets;3",
+        "after": [
+          {
+            "result": {
+              "duration": 13386,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 142195700,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user gets all customer column data using \"Select * from tp_customer\" and \"first_name\" and \"customerFirstNames.txt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Select * from tp_customer\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"first_name\"",
+                  "offset": 73
+                },
+                {
+                  "val": "\"customerFirstNames.txt\"",
+                  "offset": 90
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_gets_all_customer_column_data_using_and_and(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 8853135,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user validates all db Customer info2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 35
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_validates_all_db_Customer_info(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@database"
+          },
+          {
+            "name": "@deneme23"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "create a connection with DB",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 318771485,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user creates a connection with db using \"jdbc:postgresql://157.230.48.97:5432/gmibank_db\" , \"techprodb_user\" and \"Techpro_@126\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"jdbc:postgresql://157.230.48.97:5432/gmibank_db\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"techprodb_user\"",
+                  "offset": 92
+                },
+                {
+                  "val": "\"Techpro_@126\"",
+                  "offset": 113
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_creates_a_connection_with_db_using_and(String,String,String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 18807,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 5346,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.searchIphone()"
+            }
+          }
+        ],
+        "line": 53,
+        "name": "read all customer info",
+        "description": "",
+        "id": "all-data-validation-based-on-db;read-all-customer-info;all-customer-data-sets;4",
+        "after": [
+          {
+            "result": {
+              "duration": 14226,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 145426847,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user gets all customer column data using \"Select * from tp_customer\" and \"zip_code\" and \"customerZipCode.txt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Select * from tp_customer\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"zip_code\"",
+                  "offset": 73
+                },
+                {
+                  "val": "\"customerZipCode.txt\"",
+                  "offset": 88
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_gets_all_customer_column_data_using_and_and(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 7189214,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user validates all db Customer info2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 35
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_validates_all_db_Customer_info(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@database"
+          },
+          {
+            "name": "@deneme23"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "create a connection with DB",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 475571258,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user creates a connection with db using \"jdbc:postgresql://157.230.48.97:5432/gmibank_db\" , \"techprodb_user\" and \"Techpro_@126\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"jdbc:postgresql://157.230.48.97:5432/gmibank_db\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"techprodb_user\"",
+                  "offset": 92
+                },
+                {
+                  "val": "\"Techpro_@126\"",
+                  "offset": 113
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_creates_a_connection_with_db_using_and(String,String,String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 19020,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 5627,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.searchIphone()"
+            }
+          }
+        ],
+        "line": 54,
+        "name": "read all customer info",
+        "description": "",
+        "id": "all-data-validation-based-on-db;read-all-customer-info;all-customer-data-sets;5",
+        "after": [
+          {
+            "result": {
+              "duration": 15790,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 61669517,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user gets all customer column data using \"select * from tp_country\" and \"name\" and \"countryNames.txt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"select * from tp_country\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"name\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"countryNames.txt\"",
+                  "offset": 83
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_gets_all_customer_column_data_using_and_and(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 6270328,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user validates all db Customer info2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 35
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_validates_all_db_Customer_info(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@database"
+          },
+          {
+            "name": "@deneme23"
+          }
+        ]
+      },
+      {
+        "line": 5,
+        "name": "create a connection with DB",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 267058101,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user creates a connection with db using \"jdbc:postgresql://157.230.48.97:5432/gmibank_db\" , \"techprodb_user\" and \"Techpro_@126\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"jdbc:postgresql://157.230.48.97:5432/gmibank_db\"",
+                  "offset": 40
+                },
+                {
+                  "val": "\"techprodb_user\"",
+                  "offset": 92
+                },
+                {
+                  "val": "\"Techpro_@126\"",
+                  "offset": 113
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_creates_a_connection_with_db_using_and(String,String,String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 17891,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 5006,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.searchIphone()"
+            }
+          }
+        ],
+        "line": 55,
+        "name": "read all customer info",
+        "description": "",
+        "id": "all-data-validation-based-on-db;read-all-customer-info;all-customer-data-sets;6",
+        "after": [
+          {
+            "result": {
+              "duration": 13387,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.tearDown(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 82389276,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user gets all customer column data using \"Select * from tp_state\" and \"name\" and \"stateNames.txt\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Select * from tp_state\"",
+                  "offset": 41
+                },
+                {
+                  "val": "\"name\"",
+                  "offset": 70
+                },
+                {
+                  "val": "\"stateNames.txt\"",
+                  "offset": 81
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_gets_all_customer_column_data_using_and_and(String,String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11431690,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user validates all db Customer info2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 35
+                }
+              ],
+              "location": "DatabasePostgresSteps.user_validates_all_db_Customer_info(Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@database"
+          },
+          {
+            "name": "@deneme23"
+          }
+        ]
+      }
+    ],
+    "name": "all data validation based on DB",
+    "description": "",
+    "id": "all-data-validation-based-on-db",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/Database.feature",
+    "tags": [
+      {
+        "name": "@database",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

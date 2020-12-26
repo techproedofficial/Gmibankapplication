@@ -33,7 +33,7 @@
 
       Examples:
         |username|password|
-        |firstuser|123456|
+        |hasemployee|hasemployee|
 
     Scenario Outline: create a new account
       When user clicks on manageAccount
@@ -47,7 +47,7 @@
         |description|balance|accountType|accountStatusType|
 #      |Instructor saving account|10000|CHECKING|ACTIVE  |
 #      |Instructor checking account|2000|SAVING|ACTIVE|
-        |utilisateur4 saving account|2000|SAVING|ACTIVE|
+        |NewUser account creation Tech|2000|SAVING|ACTIVE|
 
     Scenario Outline: create a new customer
       And user navigates to my operations

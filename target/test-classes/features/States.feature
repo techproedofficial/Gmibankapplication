@@ -24,7 +24,7 @@
 
       Examples: create state
         |idJson|nameJson|
-        |1|OHIO|
+        |61339|Arizona|
 
 
 
@@ -36,4 +36,14 @@
 
       Examples: create state
         |idJson|nameJson|
-        |19246|GMIBank|
+#        |61339|North Dakota|
+       |61308|Very Smart  |
+
+
+    Scenario Outline: delete more states
+
+      Given user deletes a state using "<endPoint>" and "<id>"
+
+      Examples: all data
+      |endPoint|id|
+      |https://www.gmibank.com/api/tp-states/|61505|

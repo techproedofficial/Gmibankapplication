@@ -39,3 +39,6 @@ Feature: Dummy Test can be verified
     Examples:
       |header|fileName|
       |Customers' Information|src/test/resources/test_data/CustomersFile.pdf|
+
+    Scenario: faker test
+      Given user tries all necessary data of faker

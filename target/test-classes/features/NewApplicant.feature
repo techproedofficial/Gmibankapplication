@@ -46,3 +46,23 @@
     Scenario: Just api calls for applicants
       Given user finally validates some data with api
 
+
+
+    Scenario Outline: Register new users for GMI Bank
+      Given user is on the registration page
+      And user enters ssn number as "<SSN>"
+      Then user enters firstname and lastname as "<firstname>" and "<lastname>"
+      When user provides address "<address>"
+      Then user provides mobilephone as "<mobilephone>"
+      And user provides a username "<username>"
+      Then user provides email id as "<email>"
+      When user enters the password as "<firstpassword>"
+      And user confirms the new password "<secondpassword>"
+      Then user clicks on register button and sees the success message as "<message>"
+
+
+      Examples:
+        |SSN|firstname|lastname|address|mobilephone|username|email|firstpassword|secondpassword|message|
+#    |393-45-5678|newUser|lastbatch|Milky way|456-679-5588|utilisateur|kalin54@gmail.com|Utilisateur123.|Utilisateur123.|successfully registered|
+        |367-86-9023|utilisateur4|prenom2|New ville|798-898-8855|utilisateur4|utilisateur4@gmail.com|utilisateur4[1].|utilisateur4[1].|successfully registered|
+

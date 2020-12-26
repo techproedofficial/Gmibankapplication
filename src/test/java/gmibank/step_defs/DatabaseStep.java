@@ -1,12 +1,10 @@
 package gmibank.step_defs;
 
+import com.github.javafaker.Faker;
 import cucumber.api.java.en.Given;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DatabaseStep {
 
@@ -58,6 +56,15 @@ public class DatabaseStep {
         }
     }
 
+    @Given("user tries all necessary data of faker")
+    public void user_tries_all_necessary_data_of_faker() {
+        Faker faker = new Faker();
+        System.out.println(faker.idNumber().ssnValid());
+        System.out.println(faker.address().city());
+        System.out.println(faker.address().streetAddress());
+        System.out.println(faker.phoneNumber().phoneNumber());
+        System.out.println(faker.internet().password(10,15,true,true));
+    }
 
 }
 

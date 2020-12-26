@@ -3,15 +3,25 @@ package gmibank.step_defs;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import gmibank.pages.CustomerPage;
+import gmibank.pojos.Customer;
+import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
+import gmibank.utilities.ReadTxt;
+
+import java.util.List;
 
 public class CreateCustomerSteps {
 
     CustomerPage customerPage = new CustomerPage();
 
+    String fileName = ConfigurationReader.getProperty("fileNameOfCustomer");
+    Customer customer= ReadTxt.returnAllCustomer(fileName);
+    List <String> credentials = ReadTxt.returnAllCustomerCredentials(fileName);
+
     @Then("user types the ssn as {string}")
     public void user_types_the_ssn_as(String ssnForSeaerch) {
-        Driver.waitAndSendText(customerPage.ssnTextbox,ssnForSeaerch,5);
+       ;
+        Driver.waitAndSendText(customerPage.ssnTextbox,customer.getSsn(),5);
     }
 
     @Then("user clicks on the searchbox")
@@ -22,7 +32,7 @@ public class CreateCustomerSteps {
     @When("user types the firstname as {string}")
     public void user_types_the_firstname_as(String firstname) {
         customerPage.firstNameTextbox.clear();
-      Driver.waitAndSendText(customerPage.firstNameTextbox,firstname,5);
+      Driver.waitAndSendText(customerPage.firstNameTextbox,customer.getFirstName(),5);
     }
 
     @Then("user also types the lastname as {string}")

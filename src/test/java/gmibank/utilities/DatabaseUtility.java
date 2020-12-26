@@ -1,14 +1,6 @@
 package gmibank.utilities;
 
-import gmibank.pojos.Country;
-import gmibank.pojos.Customer;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -65,6 +57,11 @@ public class DatabaseUtility {
 
         return getQueryResultList(query).get(0).get(0);
     }
+
+    public static Object getCellValue(String query,int rowNum, int cellNum) {
+
+        return getQueryResultList(query).get(rowNum).get(cellNum);
+    }
     /**
      *
      * @param query
@@ -75,6 +72,11 @@ public class DatabaseUtility {
     public static List<Object> getRowList(String query) {
 
         return getQueryResultList(query).get(0);
+    }
+
+    public static List<Object> getRowList(String query, int rowNum) {
+
+        return getQueryResultList(query).get(rowNum);
     }
     /**
      *
@@ -131,6 +133,14 @@ public class DatabaseUtility {
             e.printStackTrace();
         }
         return rowList;
+    }
+
+    public static void main(String[] args) {
+        createConnection("jdbc:postgresql://157.230.48.97:5432/gmibank_db","techprodb_user","Techpro_@126");
+        String query ="Select * from tp_country";
+//        List <Object> allIds = getColumnData(query,"name");
+//        getRowList(query);
+        System.out.println(getRowList(query,7));
     }
     /**
      *
@@ -244,30 +254,30 @@ public class DatabaseUtility {
         return getQueryResultList(query).get(row);
     }
 
-    public static void main(String[] args) {
-        String query = "Select * from tp_customer;";
-        createConnection("jdbc:postgresql://157.230.48.97:5432/gmibank_db","techprodb_user","Techpro_@126");
-//        getColumnNames(query);
-//        System.out.println(getColumnNames(query));
-//        System.out.println(getColumnData(query, getColumnNames(query).get(3)));
-//        System.out.println(getCellValuewithRowsAndCells(query,5,4));
-        List <Customer> listOfCustomers = new ArrayList<>();
-
-        List <List< Object>> list =getQueryResultList(query);
-        for (int i=0; i<20; i++){
-            Customer customer = new Customer();
-            Country country = new Country();
-            System.out.println(list.get(i).get(1));
-            customer.setFirstName(list.get(i).get(1).toString());
-            customer.setSsn(list.get(i).get(10).toString());
-            country.setName(list.get(i).get(8).toString());
-            customer.setState(list.get(i).get(14).toString());
-            customer.setZipCode(list.get(i).get(15).toString());
-            customer.setCountry(country);
-            listOfCustomers.add(customer);
-        }
-
-        PDFGenerator.pdfGeneratorRowsAndCellsWithList("All Customers!",listOfCustomers,"AllApplicants.pdf" );
-
-    }
+//    public static void main(String[] args) {
+//        String query = "Select * from tp_customer;";
+//        createConnection("jdbc:postgresql://157.230.48.97:5432/gmibank_db","techprodb_user","Techpro_@126");
+////        getColumnNames(query);
+////        System.out.println(getColumnNames(query));
+////        System.out.println(getColumnData(query, getColumnNames(query).get(3)));
+////        System.out.println(getCellValuewithRowsAndCells(query,5,4));
+//        List <Customer> listOfCustomers = new ArrayList<>();
+//
+//        List <List< Object>> list =getQueryResultList(query);
+//        for (int i=0; i<20; i++){
+//            Customer customer = new Customer();
+//            Country country = new Country();
+//            System.out.println(list.get(i).get(1));
+//            customer.setFirstName(list.get(i).get(1).toString());
+//            customer.setSsn(list.get(i).get(10).toString());
+//            country.setName(list.get(i).get(8).toString());
+//            customer.setState(list.get(i).get(14).toString());
+//            customer.setZipCode(list.get(i).get(15).toString());
+//            customer.setCountry(country);
+//            listOfCustomers.add(customer);
+//        }
+//
+//        PDFGenerator.pdfGeneratorRowsAndCellsWithList("All Customers!",listOfCustomers,"AllApplicants.pdf" );
+//
+//    }
 }

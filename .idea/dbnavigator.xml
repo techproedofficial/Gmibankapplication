@@ -25,19 +25,19 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="25c266ab-890b-4ef4-8149-b340abb57ee9">
-        <schema name="information_schema" object-types="function, view, table" />
-        <schema name="pg_catalog" object-types="function, view, column, table" />
-        <schema name="public" object-types="function, view, column, table" />
+        <schema name="information_schema" object-types="function" />
+        <schema name="pg_catalog" object-types="table, function, view" />
+        <schema name="public" object-types="table, column, function, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="25c266ab-890b-4ef4-8149-b340abb57ee9">
-      <console name="Connection" type="STANDARD" schema="public" session="Main">SELECT * FROM pg_catalog.pg_tables;
+      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM pg_catalog.pg_tables;
 
 select * from tp_country order by id desc;
 
-insert into tp_country (&quot;id&quot;, &quot;name&quot;) values ((Select max(id) from tp_country)+1,'TestCountry');
+insert into tp_country ("id", "name") values ((Select max(id) from tp_country)+1,'TestCountry');
 
 Select max(id) from tp_country  ;
 
@@ -45,10 +45,12 @@ select * from tp_country where id = 24401;
 
 select * from tp_country;
 
-Select * from tp_customer;</console>
-      <console name="Connection 1" type="STANDARD" schema="public" session="Main">SELECT * FROM pg_catalog.pg_tables;
+Select * from tp_customer;
 
-Select * from tp_customer;</console>
+Select * from tp_state;]]></console>
+      <console name="Connection 1" type="STANDARD" schema="information_schema" session="Main"><![CDATA[SELECT * FROM pg_catalog.pg_tables;
+
+Select * from tp_customer;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

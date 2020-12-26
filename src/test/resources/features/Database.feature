@@ -31,6 +31,31 @@
         |Select * from tp_country|id|name|
 
 
+      Scenario Outline:  read all customer info
+        Given user gets all customer column data using "<query>" and "<columnName>"
+        And user sets all customer info to correspondent files
+        Then user validates all db Customer info
+
+        Examples: all Customer data sets
+        |query|columnName|
+        |Select * from tp_customer|ssn|
+
+
+        @deneme23
+    Scenario Outline:  read all customer info
+      Given user gets all customer column data using "<query>" and "<columnName>" and "<fileType>"
+      Then user validates all db Customer info2
+
+      Examples: all Customer data sets
+        |query|columnName|fileType|
+        |Select * from tp_customer|ssn|customerSSN.txt|
+        |Select * from tp_customer|first_name|customerFirstNames.txt|
+        |Select * from tp_customer|zip_code|customerZipCode.txt|
+        |select * from tp_country |name    |countryNames.txt   |
+        |Select * from tp_state   |name    |stateNames.txt     |
+
+
+
 
 
 

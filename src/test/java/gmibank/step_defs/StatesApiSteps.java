@@ -82,6 +82,24 @@ public class StatesApiSteps {
 
 
     }
+    @Given("user deletes a state using {string} and {string}")
+    public void user_deletes_a_state_using_and(String url, String id) {
+
+        response =given().headers(
+                "Authorization",
+                "Bearer " + ConfigurationReader.getProperty("api_bearer_token"),
+                "Content-Type",
+                ContentType.JSON,
+                "Accept",
+                ContentType.JSON)
+                .when()
+                .delete(url+id)
+                .then()
+                .extract()
+                .response();
+
+    }
+
 
     @Given("user sets the response using api end point {string} and creates states using {string} and {string}")
     public void user_sets_the_response_using_api_end_point_and_creates_states_using_and(String endPoint, String id, String name) {

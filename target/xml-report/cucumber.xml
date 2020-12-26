@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" time="0"/>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="5" time="2.736581">
+<testcase classname="all data validation based on DB" name="read all customer info" time="0.899695">
+<system-out><![CDATA[Given user creates a connection with db using "jdbc:postgresql://157.230.48.97:5432/gmibank_db" , "techprodb_user" and "Techpro_@126".passed
+Given user gets all customer column data using "Select * from tp_customer" and "ssn" and "customerSSN.txt".passed
+Then user validates all db Customer info2...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="all data validation based on DB" name="read all customer info 2" time="0.460568">
+<system-out><![CDATA[Given user creates a connection with db using "jdbc:postgresql://157.230.48.97:5432/gmibank_db" , "techprodb_user" and "Techpro_@126".passed
+Given user gets all customer column data using "Select * from tp_customer" and "first_name" and "customerFirstNames.txt".passed
+Then user validates all db Customer info2...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="all data validation based on DB" name="read all customer info 3" time="0.471564">
+<system-out><![CDATA[Given user creates a connection with db using "jdbc:postgresql://157.230.48.97:5432/gmibank_db" , "techprodb_user" and "Techpro_@126".passed
+Given user gets all customer column data using "Select * from tp_customer" and "zip_code" and "customerZipCode.txt".passed
+Then user validates all db Customer info2...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="all data validation based on DB" name="read all customer info 4" time="0.543703">
+<system-out><![CDATA[Given user creates a connection with db using "jdbc:postgresql://157.230.48.97:5432/gmibank_db" , "techprodb_user" and "Techpro_@126".passed
+Given user gets all customer column data using "select * from tp_country" and "name" and "countryNames.txt".passed
+Then user validates all db Customer info2...................................passed
+]]></system-out>
+</testcase>
+<testcase classname="all data validation based on DB" name="read all customer info 5" time="0.361051">
+<system-out><![CDATA[Given user creates a connection with db using "jdbc:postgresql://157.230.48.97:5432/gmibank_db" , "techprodb_user" and "Techpro_@126".passed
+Given user gets all customer column data using "Select * from tp_state" and "name" and "stateNames.txt".passed
+Then user validates all db Customer info2...................................passed
+]]></system-out>
+</testcase>
+</testsuite>
