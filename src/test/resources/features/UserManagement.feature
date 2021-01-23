@@ -13,7 +13,7 @@
 
       Examples:
         |username|password|
-        |admin2|TechAdmin2|
+        |CWoburn|Cw192837?|
 
 
 

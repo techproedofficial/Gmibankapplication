@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 public class RegistrationPage extends CommonPageElements{
 
     public RegistrationPage(){
+
         PageFactory.initElements(Driver.getDriver(), this);
     }
     @FindBy(id = "ssn")
@@ -42,6 +43,10 @@ public class RegistrationPage extends CommonPageElements{
 
     @FindBy(xpath = "//*[contains(text(),'translation-not-foun'")
     public WebElement toastContainer;
+
+
+
+
 }
 
 

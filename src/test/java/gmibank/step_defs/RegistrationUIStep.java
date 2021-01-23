@@ -18,9 +18,9 @@ public class RegistrationUIStep {
     Faker faker = new Faker();
     Customer customer = new Customer();
     User user = new User();
-    String fileName = ConfigurationReader.getProperty("fileNameOfCustomer");
-    String firstName;
-    String lastName;
+    private String fileName = ConfigurationReader.getProperty("fileNameOfCustomer");
+    private String firstName;
+    private String lastName;
     String firstPassword;
     String userName;
 
@@ -33,7 +33,9 @@ public class RegistrationUIStep {
     @Given("user enters ssn number as {string}")
     public void user_enters_ssn_number_as(String ssn) {
 
-        ssn = faker.idNumber().ssnValid();
+
+//        ssn = faker.idNumber().ssnValid();
+
         Driver.waitAndSendText(registrationPage.ssnTextbox,ssn,10);
         customer.setSsn(ssn);
     }
@@ -45,8 +47,8 @@ public class RegistrationUIStep {
         this.firstName = firstname;
         lastname = faker.name().lastName();
         this.lastName = lastname;
-        Driver.waitAndSendText(registrationPage.firstnameTextbox,firstname,5);
-        Driver.waitAndSendText(registrationPage.lastnameTextbox,lastname,7);
+        Driver.waitAndSendText(registrationPage.firstnameTextbox,firstname);
+        Driver.waitAndSendText(registrationPage.lastnameTextbox,lastname);
         customer.setFirstName(firstname);
         customer.setLastName(lastname);
 

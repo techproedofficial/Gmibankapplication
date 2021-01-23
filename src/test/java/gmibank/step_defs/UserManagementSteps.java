@@ -4,9 +4,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 import gmibank.pages.CommonPageElements;
 import gmibank.pages.UserManagementPage;
-import gmibank.utilities.ConfigurationReader;
 import gmibank.utilities.Driver;
-import gmibank.utilities.ReadTxt;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -55,7 +53,7 @@ public class UserManagementSteps {
         int current =0;
         boolean flag = false;
 
-        String expectedUser = ReadTxt.returnAllCustomerCredentials(ConfigurationReader.getProperty("fileNameOfCustomer")).get(1);
+        String expectedUser = "user2020";//ReadTxt.returnAllCustomerCredentials(ConfigurationReader.getProperty("fileNameOfCustomer")).get(1);
           String lastPage="";
 
                 for(int i =iterateTimes; i>=1;i--) {

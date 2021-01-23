@@ -13,6 +13,7 @@ public class CommonPageElements {
     String locator= "";
 
     public CommonPageElements(){
+
         PageFactory.initElements(Driver.getDriver(),this);
     }
 

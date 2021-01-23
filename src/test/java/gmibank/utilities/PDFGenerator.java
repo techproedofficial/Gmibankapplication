@@ -161,23 +161,23 @@ public class PDFGenerator {
 
     }
 
-    public static void main(String[] args) {
-//        pdfGeneratorRowsAndCells("My Header","deneme.pdf");
-        List<Customer> list = new ArrayList<>();
-        Country country = new Country();
-        country.setName("USA");
-        Customer customer = new Customer();
-        customer.setSsn("234-56-5678");
-        customer.setFirstName("Erkan");
-        customer.setState("Virginia");
-        customer.setCountry(country);
-        customer.setZipCode("12765");
-        list.add(customer);
-
-
-
-        pdfGeneratorRowsAndCellsWithList("UserInfo",list, "CustomerCreation.pdf");
-    }
+//    public static void main(String[] args) {
+////        pdfGeneratorRowsAndCells("My Header","deneme.pdf");
+//        List<Customer> list = new ArrayList<>();
+//        Country country = new Country();
+//        country.setName("USA");
+//        Customer customer = new Customer();
+//        customer.setSsn("234-56-5678");
+//        customer.setFirstName("Erkan");
+//        customer.setState("Virginia");
+//        customer.setCountry(country);
+//        customer.setZipCode("12765");
+//        list.add(customer);
+//
+//
+//
+//        pdfGeneratorRowsAndCellsWithList("UserInfo",list, "CustomerCreation.pdf");
+//    }
 
     public static void pdfGeneratorRowsAndCellsWithList(String header, List <Customer> list, String fileName){
 
@@ -245,38 +245,39 @@ public class PDFGenerator {
 
     }
 
-//    public static void main(String[] args) {
-//
-//        List <Customer> list = new ArrayList<>();
-//        Country country = new Country();
-//        country.setName("USA");
-//        Customer customer = new Customer();
-//        customer.setFirstName("Emine");
-//        customer.setState("MA");
-//        customer.setSsn("202020202");
-//        customer.setZipCode("02120");
-//        customer.setCountry(country);
-//
-//        list.add(customer);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//        String header = "All Applicants Information";
-//        String fileName ="applicants.pdf";
-//
-//
-//
-//
-//
-//
-//
-//        pdfGeneratorRowsAndCellsWithList(header,list,fileName);
-//    }
+    public static void main(String[] args) {
+
+        List <Customer> list = new ArrayList<>();
+        for(int i=0 ; i<3;i++) {
+            Country country = new Country();
+            country.setName("USA");
+            Customer customer = new Customer();
+            customer.setFirstName("Ozcan");
+            customer.setState("MA");
+            customer.setSsn("202020202");
+            customer.setZipCode("02120");
+            customer.setCountry(country);
+
+            list.add(customer);
+        }
+
+
+
+
+
+
+
+
+        String header = "All Applicants Information";
+        String fileName ="BankAppForBatch67.pdf";
+
+
+
+
+
+
+
+        pdfGeneratorRowsAndCellsWithList(header,list,fileName);
+    }
 
 }

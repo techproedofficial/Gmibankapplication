@@ -76,6 +76,7 @@ public class Driver {
             }
         }
     }
+
     public static void waitAndClick(WebElement element) {
         for (int i = 0; i < timeout; i++) {
             try {
@@ -88,6 +89,17 @@ public class Driver {
     }
 
     public static void waitAndSendText(WebElement element,String text, int timeout) {
+        for (int i = 0; i < timeout; i++) {
+            try {
+                element.sendKeys(text);
+                return;
+            } catch (WebDriverException e) {
+                wait(1);
+            }
+        }
+    }
+
+    public static void waitAndSendText(WebElement element,String text) {
         for (int i = 0; i < timeout; i++) {
             try {
                 element.sendKeys(text);

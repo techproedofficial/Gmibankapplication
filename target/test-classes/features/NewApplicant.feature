@@ -18,7 +18,7 @@
       Then user clicks on register button and sees the success message as "<message>"
 
 
-      Examples:
+      Examples: multiple test data
       |SSN|firstname|lastname|address|mobilephone|username|email|firstpassword|secondpassword|message|
 #    |393-45-5678|newUser|lastbatch|Milky way|456-679-5588|utilisateur|kalin54@gmail.com|Utilisateur123.|Utilisateur123.|successfully registered|
     |333-45-2345|Ben|Student|Long Island|689-345-2354|StakeHolder|stakeholder@gmail.com|stakeholder[1].|stakeholder[1].|successfully registered|
