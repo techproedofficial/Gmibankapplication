@@ -39,7 +39,7 @@ public class CustomerApiSteps2 {
                 .extract()
                 .response();
 
-//        response.prettyPrint();
+        response.prettyPrint();
 
 
 
@@ -50,9 +50,9 @@ public class CustomerApiSteps2 {
 
         ObjectMapper obj = new ObjectMapper();
         customers = obj.readValue(response.asString(),Customer[].class );
-        for (int i=0; i<customers.length;i++)
-        if(customers[i].getUser() != null)
-        System.out.println(customers[i].getUser().getFirstName());
+//        for (int i=0; i<customers.length;i++)
+//        if(customers[i].getUser() != null)
+//        System.out.println(customers[i].getUser().getFirstName());
 
 
     }
@@ -103,7 +103,7 @@ public class CustomerApiSteps2 {
 
     @Given("user sets all Customer information to related files")
     public void user_sets_all_Customer_information_to_related_files() {
-//        WriteToTxt.saveAllCustomers("src/test/resources/test_data/CustomerInfo.txt",customers);
+        WriteToTxt.saveAllCustomers("src/test/resources/test_data/CustomerInfo.txt",customers);
     }
 
     @Then("user validates allCustomer data")

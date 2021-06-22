@@ -24,7 +24,12 @@
 
       Examples: create state
         |idJson|nameJson|
-        |61339|Arizona|
+        |24118|Varsova|
+#        |91040|NJ|
+#        |91040|Washignton|
+#        |91040|Virginia|
+#        |91040|California|
+
 
 
 
@@ -34,10 +39,10 @@
 
 
 
-      Examples: create state
+      Examples: update state
         |idJson|nameJson|
 #        |61339|North Dakota|
-       |61308|Very Smart  |
+       |91486|VarsovaNew|
 
 
     Scenario Outline: delete more states
@@ -46,4 +51,6 @@
 
       Examples: all data
       |endPoint|id|
-      |https://www.gmibank.com/api/tp-states/|61505|
+      |https://www.gmibank.com/api/tp-states/|91486|
+      |https://www.gmibank.com/api/tp-states/|91486|
+      |https://www.gmibank.com/api/tp-states/|91486|

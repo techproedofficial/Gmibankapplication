@@ -7,6 +7,7 @@ import gmibank.pojos.Customer;
 import gmibank.utilities.DatabaseUtility;
 import gmibank.utilities.PDFGenerator;
 import gmibank.utilities.ReadTxt;
+import gmibank.utilities.WriteToTxt;
 import org.junit.Assert;
 
 import java.util.ArrayList;
@@ -21,6 +22,39 @@ public class DatabasePostgresSteps {
     public void user_creates_a_connection_with_db_using_and(String port, String username, String password) {
         DatabaseUtility.createConnection(port,username,password);
     }
+
+
+
+    @Given("user gets all customer information using {string}")
+    public void user_gets_all_customer_information_using(String query) {
+        List<Object> allCustomerEmails= DatabaseUtility.getColumnData(query,"phone_number");
+        System.out.println(allCustomerEmails);
+    }
+
+    @Then("user validates the data for customer")
+    public void user_validates_the_data_for_customer() {
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     @Given("user provides the query as {string} and {string}")
     public void user_provides_the_query_as_and(String query, String columnName) {
@@ -89,25 +123,25 @@ public class DatabasePostgresSteps {
     public void user_gets_all_customer_column_data_using_and(String query, String columnName) {
 
         allColumnData = DatabaseUtility.getColumnData(query,columnName);
-        System.out.println(allColumnData);
+//        System.out.println(allColumnData);
     }
 
     @Given("user sets all customer info to correspondent files")
     public void user_sets_all_customer_info_to_correspondent_files() {
         String fileName = "allCustomerNames.txt";
 
-//        WriteToTxt.saveAllCustomersComingFromDB(fileName,allColumnData);
+        WriteToTxt.saveAllCustomersComingFromDB(fileName,allColumnData);
 
     }
 
     @Then("user validates all db Customer info")
     public void user_validates_all_db_Customer_info() {
        List <Object> list = ReadTxt.returnAllCustomerIds("allCustomerSSNIDs.txt");
-        System.out.println(list);
+//        System.out.println(list);
        List <Object> listValidate = new ArrayList<>();
-        listValidate.add("324-78-4567");
-
-        System.out.println(list);
+        listValidate.add("439-12-4312");
+        listValidate.add("511-18-8543");
+//        System.out.println(list);
         Assert.assertTrue("The expected names are not matching!!",list.containsAll(listValidate));
     }
 

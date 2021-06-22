@@ -34,9 +34,9 @@ public class RegistrationUIStep {
     public void user_enters_ssn_number_as(String ssn) {
 
 
-//        ssn = faker.idNumber().ssnValid();
+        ssn = faker.idNumber().ssnValid();
 
-        Driver.waitAndSendText(registrationPage.ssnTextbox,ssn,10);
+        Driver.waitAndSendText(registrationPage.ssnTextbox,ssn,5);
         customer.setSsn(ssn);
     }
 

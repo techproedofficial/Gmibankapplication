@@ -53,7 +53,7 @@ public class UserManagementSteps {
         int current =0;
         boolean flag = false;
 
-        String expectedUser = "user2020";//ReadTxt.returnAllCustomerCredentials(ConfigurationReader.getProperty("fileNameOfCustomer")).get(1);
+        String expectedUser = "umran78";//ReadTxt.returnAllCustomerCredentials(ConfigurationReader.getProperty("fileNameOfCustomer")).get(1);
           String lastPage="";
 
                 for(int i =iterateTimes; i>=1;i--) {

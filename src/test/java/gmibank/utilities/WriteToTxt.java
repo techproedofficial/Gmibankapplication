@@ -119,9 +119,8 @@ public class WriteToTxt {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
 
             for (int i=0; i<customers.length; i++) {
-                writer.append(customers[i].getSsn() + "," + customers[i].getFirstName() + ",");
-                if(customers[i].getCountry() != null)
-                writer.append(customers[i].getCountry().getName() + "," + customers[i].getCountry().getId() + ",\n");
+                writer.append(customers[i].getSsn() + "," + customers[i].getFirstName()+","+customers[i].getLastName() + "\n");
+
             }
             writer.close();
         } catch(Exception e){
@@ -130,19 +129,25 @@ public class WriteToTxt {
     }
 
     public static void saveAllCustomer(String fileName, Customer customer,String password,String username)  {
+
+
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(fileName, true));
 
 
-                writer.append(password + "," +username+","+ customer.getFirstName() + ",");
-                writer.append(customer.getLastName() + "," + customer.getSsn() + ",");
-                writer.append(customer.getAddress() + "," + customer.getEmail() + ","+customer.getMobilePhoneNumber()+"\n");
+            writer.append(password + "," +username+","+ customer.getFirstName() + ",");
+            writer.append(customer.getLastName() + "," + customer.getSsn() + ",");
+            writer.append(customer.getAddress() + "," + customer.getEmail() + ","+customer.getMobilePhoneNumber()+"\n");
 
 
             writer.close();
         } catch(Exception e){
 
         }
+
+
+
+
     }
 
     public static void saveAllCustomersComingFromDB(String fileName, List<Object> allCustomer)  {

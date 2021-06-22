@@ -62,6 +62,8 @@ public class DatabaseUtility {
 
         return getQueryResultList(query).get(rowNum).get(cellNum);
     }
+
+
     /**
      *
      * @param query
@@ -137,10 +139,10 @@ public class DatabaseUtility {
 
     public static void main(String[] args) {
         createConnection("jdbc:postgresql://157.230.48.97:5432/gmibank_db","techprodb_user","Techpro_@126");
-        String query ="Select * from tp_country";
+        String query ="Select * from tp_customer";
 //        List <Object> allIds = getColumnData(query,"name");
 //        getRowList(query);
-        System.out.println(getRowList(query,7));
+        System.out.println(getColumnData(query,"last_name"));
     }
     /**
      *
@@ -209,7 +211,7 @@ public class DatabaseUtility {
         return rowCount;
     }
 
-    public static void insertCountry(String  countryName){
+    public static void main(String  countryName){
 
 
 
@@ -253,6 +255,7 @@ public class DatabaseUtility {
 
         return getQueryResultList(query).get(row);
     }
+
 
 //    public static void main(String[] args) {
 //        String query = "Select * from tp_customer;";

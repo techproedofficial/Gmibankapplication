@@ -12,10 +12,16 @@
 
         Examples: create country
         |idJson|nameJson|
-        |name|New Zelland2|
-        |name|New Zelland3|
+        |name|Huzur Country|
+#        |name|UK0017|
+#        |name|UK0018|
+#        |name|UK0019|
+#        |name|UK0020|
+#        |name|UK0021|
 
-        Scenario: read all countries
+
+
+    Scenario: read all countries
           Given user sets the countries to response using "https://www.gmibank.com/api/tp-countries"
           And user saves the countries to correspondent files
           Then user validates the countries
@@ -26,7 +32,7 @@
 
             Examples: multiple countries
             |endPoint|id|
-            |https://www.gmibank.com/api/tp-countries|/22313|
+            |https://www.gmibank.com/api/tp-countries|/22338|
 
 
     Scenario: read logs
